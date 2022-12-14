@@ -1,5 +1,11 @@
 # Changelog
 
+* Switched from `unittest` to `pytest`
+* Finished up documentation on `DeconstructionPlanner`
+* Patched InvalidModVersionError for now (#51)
+* Added data functions `signals.add_signal()`, `tiles.add_tile()`, `entities.add_entity()`, etc.
+* Made it so that default `collision_mask` keys are resolved at once at the data level when you call `draftsman-update`, so you can query `entities.raw` for the correct default value
+
 ## 1.0.5
 * Added `get_blueprintable_from_JSON()` and patched `get_blueprintable_from_string()` so that it no longer converts the string twice (accidentally)
 * Fixed issue where integer `playback_volume` values on programmable speakers wasn't getting coerced to a float and failing validation (#72)
